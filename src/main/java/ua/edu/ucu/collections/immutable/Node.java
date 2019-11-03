@@ -1,7 +1,7 @@
 package ua.edu.ucu.collections.immutable;
 
 public class Node implements Cloneable {
-    public final Object data;
+    private final Object data;
     public Node next = null;
 
     public Node(Object data) {
@@ -24,6 +24,7 @@ public class Node implements Cloneable {
         return next;
     }
 
+    @Override
     public Node clone() {
         return new Node(this.data);
     }
