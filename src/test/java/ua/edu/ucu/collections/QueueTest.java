@@ -1,6 +1,7 @@
 package ua.edu.ucu.collections;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class QueueTest {
@@ -14,6 +15,7 @@ public class QueueTest {
         new_queue.enqueue(4);
         assertEquals("1 2 3 4 ", new_queue.toString());
     }
+
     @Test
     public void testPeek() {
         Queue new_queue = new Queue();
@@ -24,6 +26,7 @@ public class QueueTest {
         Object actualResult = new_queue.peek();
         assertEquals(1, actualResult);
     }
+
     @Test
     public void testDequeue() {
         Queue new_queue = new Queue();

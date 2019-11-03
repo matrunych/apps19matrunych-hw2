@@ -211,7 +211,7 @@ public class ImmutableLinkedListTest {
     public void testEmpty() {
         ImmutableList newLst = new ImmutableLinkedList();
         boolean actualResult = newLst.isEmpty();
-        assertEquals(true, actualResult);
+        assertTrue(actualResult);
     }
 
     @Test
@@ -219,7 +219,7 @@ public class ImmutableLinkedListTest {
         ImmutableList newLst = new ImmutableLinkedList();
         newLst = newLst.add(1);
         boolean actualResult = newLst.isEmpty();
-        assertEquals(false, actualResult);
+        assertFalse(actualResult);
     }
 
     @Test
@@ -255,23 +255,25 @@ public class ImmutableLinkedListTest {
     }
 
     @Test
-    public void removeFirst(){
+    public void removeFirst() {
         ImmutableLinkedList newLst = new ImmutableLinkedList();
         newLst = newLst.add(2);
         newLst = newLst.add(100);
-        newLst = newLst.add(1,3);
+        newLst = newLst.add(1, 3);
         newLst = newLst.removeFirst();
         assertEquals("3 100 ", newLst.toString());
     }
+
     @Test
-    public void removeLast(){
+    public void removeLast() {
         ImmutableLinkedList newLst = new ImmutableLinkedList();
         newLst = newLst.add(2);
         newLst = newLst.add(100);
-        newLst = newLst.add(1,3);
+        newLst = newLst.add(1, 3);
         newLst = newLst.removeLast();
         assertEquals("2 3 ", newLst.toString());
     }
+
     @Test
     public void getFirst() {
         ImmutableList newLst = new ImmutableLinkedList();

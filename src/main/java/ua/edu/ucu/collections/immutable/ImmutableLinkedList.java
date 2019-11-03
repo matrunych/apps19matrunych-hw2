@@ -1,7 +1,7 @@
 package ua.edu.ucu.collections.immutable;
 
 public class ImmutableLinkedList implements ImmutableList {
-    public final Node head;
+    private final Node head;
     private int size;
 
     public ImmutableLinkedList() {
@@ -290,11 +290,12 @@ public class ImmutableLinkedList implements ImmutableList {
     }
 
     public ImmutableLinkedList addFirst(Object e) {
-        return this.add(0, e);
+        return (ImmutableLinkedList) add(0, e);
+
     }
 
     public ImmutableLinkedList addLast(Object e) {
-        return this.add(e);
+        return (ImmutableLinkedList) add(e);
     }
 
     public ImmutableLinkedList removeFirst() {

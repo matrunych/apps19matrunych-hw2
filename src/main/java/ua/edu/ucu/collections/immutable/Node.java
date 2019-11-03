@@ -4,11 +4,11 @@ public class Node implements Cloneable {
     public final Object data;
     public Node next = null;
 
-    public Node(Object data){
+    public Node(Object data) {
         this.data = data;
     }
 
-    public void setNext(Node next){
+    public void setNext(Node next) {
         this.next = next;
     }
 
@@ -16,19 +16,19 @@ public class Node implements Cloneable {
 //        this.data = data;
 //    }
 
-    public Object getData(){
+    public Object getData() {
         return data;
     }
 
-    public Node getNext(){
+    public Node getNext() {
         return next;
     }
 
-    public Node clone(){
+    public Node clone() {
         return new Node(this.data);
     }
 
-    public String toString(){
+    public String toString() {
         return getData().toString();
     }
 
