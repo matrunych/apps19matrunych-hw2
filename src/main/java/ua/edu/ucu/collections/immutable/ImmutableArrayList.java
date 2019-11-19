@@ -134,7 +134,7 @@ public class ImmutableArrayList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
         for (int i = 0; i < size(); i++) {
-            if (e == newArray[i]) {
+            if (e.equals(newArray[i])) {
                 return i;
             }
         }

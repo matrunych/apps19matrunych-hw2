@@ -230,7 +230,7 @@ public class ImmutableLinkedList implements ImmutableList {
         Node clonedLst = cloneLinkedList();
         int i = 0;
         while (i != size) {
-            if (clonedLst.getData() == e) {
+            if (clonedLst.getData().equals(e)) {
                 return i;
             }
             clonedLst = clonedLst.next;
